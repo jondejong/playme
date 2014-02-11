@@ -8,24 +8,44 @@
 
 #import "PMViewController.h"
 #import "PMMyScene.h"
+#import "PMStartScene.h"
+#import "PMSoundDelegate.h"
 
 @implementation PMViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//
+//    // Configure the view.
+//    SKView * skView = (SKView *)self.view;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
+//    
+//    // Create and configure the scene.
+//    SKScene * scene = [PMStartScene sceneWithSize:skView.bounds.size];
+//    scene.scaleMode = SKSceneScaleModeAspectFill;
+//    
+//    // Present the scene.
+//    [skView presentScene:scene];
+//}
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    
-    // Create and configure the scene.
-    SKScene * scene = [PMMyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
+- (void) viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    [[PMSoundDelegate sharedInstance] playBackgroundMusic:BGM_TITLE];
+	// Do any additional setup after loading the view, typically from a nib.
+    SKView *spriteView = (SKView *) self.view;
+    spriteView.showsDrawCount = YES;
+    spriteView.showsNodeCount = YES;
+    spriteView.showsFPS = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    PMStartScene* startScene = [[PMStartScene alloc] initWithSize:CGSizeMake(1024,768)];
+    SKView *spriteView = (SKView *) self.view;
+    [spriteView presentScene: startScene];
 }
 
 - (BOOL)shouldAutorotate

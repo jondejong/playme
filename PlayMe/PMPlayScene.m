@@ -8,7 +8,6 @@
 
 #import "PMPlayScene.h"
 #import <UIKit/UIKit.h>
-#import "PMSoundDelegate.h"
 
 @interface PMPlayScene ()
 @property BOOL contentCreated;
@@ -73,17 +72,17 @@
             [node removeFromParent];
             [self addHoopy];
             //testing sound disable and re-enable
-            PMSoundDelegate *sharedInstance = [PMSoundDelegate sharedInstance];
-            if([sharedInstance isEnabled])
-            {
-                [sharedInstance playSoundEffect:SFX_ZOMBIE2 :self];
-                [sharedInstance setEnabled:NO];
-            }
-            else
-            {
-                [sharedInstance setEnabled:YES];
-                [sharedInstance playSoundEffect:SFX_ZOMBIE1 :self];
-            }
+//            PMSoundDelegate *sharedInstance = [PMSoundDelegate sharedInstance];
+//            if([sharedInstance isEnabled])
+//            {
+//                [sharedInstance playSoundEffect:SFX_ZOMBIE2 :self];
+//                [sharedInstance setEnabled:NO];
+//            }
+//            else
+//            {
+//                [sharedInstance setEnabled:YES];
+//                [sharedInstance playSoundEffect:SFX_ZOMBIE1 :self];
+//            }
         }
     }];
 }

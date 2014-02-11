@@ -8,18 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C25C613518A14EE100669391 /* PMStartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C25C613418A14EE100669391 /* PMStartScene.m */; };
-		C25C613818A14F5E00669391 /* PMSoundDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C25C613718A14F5E00669391 /* PMSoundDelegate.m */; };
 		C25C613B18A1843000669391 /* PMPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C25C613A18A1843000669391 /* PMPlayScene.m */; };
 		C25C614818A18C5B00669391 /* gameTextures.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C25C613D18A18C5B00669391 /* gameTextures.atlas */; };
-		C25C614918A18C5B00669391 /* hh_bonus1.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C613F18A18C5B00669391 /* hh_bonus1.caf */; };
-		C25C614A18A18C5B00669391 /* hh_game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614018A18C5B00669391 /* hh_game_over.caf */; };
-		C25C614B18A18C5B00669391 /* hh_lost_life.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614118A18C5B00669391 /* hh_lost_life.caf */; };
-		C25C614C18A18C5B00669391 /* hh_stage1.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614218A18C5B00669391 /* hh_stage1.caf */; };
-		C25C614D18A18C5B00669391 /* hh_stage2.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614318A18C5B00669391 /* hh_stage2.caf */; };
-		C25C614E18A18C5B00669391 /* hh_stage3.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614418A18C5B00669391 /* hh_stage3.caf */; };
-		C25C614F18A18C5B00669391 /* hh_title.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614518A18C5B00669391 /* hh_title.caf */; };
-		C25C615018A18C5B00669391 /* zombie1.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614618A18C5B00669391 /* zombie1.caf */; };
-		C25C615118A18C5B00669391 /* zombie2.caf in Resources */ = {isa = PBXBuildFile; fileRef = C25C614718A18C5B00669391 /* zombie2.caf */; };
 		C2E0A500188F630B0050DF29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E0A4FF188F630B0050DF29 /* Foundation.framework */; };
 		C2E0A502188F630B0050DF29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E0A501188F630B0050DF29 /* CoreGraphics.framework */; };
 		C2E0A504188F630B0050DF29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E0A503188F630B0050DF29 /* UIKit.framework */; };
@@ -30,7 +20,6 @@
 		C2E0A515188F630B0050DF29 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E0A513188F630B0050DF29 /* Main_iPhone.storyboard */; };
 		C2E0A518188F630B0050DF29 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E0A516188F630B0050DF29 /* Main_iPad.storyboard */; };
 		C2E0A51B188F630B0050DF29 /* PMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E0A51A188F630B0050DF29 /* PMViewController.m */; };
-		C2E0A51E188F630B0050DF29 /* PMMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E0A51D188F630B0050DF29 /* PMMyScene.m */; };
 		C2E0A522188F630B0050DF29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E0A521188F630B0050DF29 /* Images.xcassets */; };
 		C2E0A529188F630B0050DF29 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E0A528188F630B0050DF29 /* XCTest.framework */; };
 		C2E0A52A188F630B0050DF29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E0A4FF188F630B0050DF29 /* Foundation.framework */; };
@@ -52,20 +41,9 @@
 /* Begin PBXFileReference section */
 		C25C613318A14EE000669391 /* PMStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMStartScene.h; sourceTree = "<group>"; };
 		C25C613418A14EE100669391 /* PMStartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMStartScene.m; sourceTree = "<group>"; };
-		C25C613618A14F5E00669391 /* PMSoundDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSoundDelegate.h; sourceTree = "<group>"; };
-		C25C613718A14F5E00669391 /* PMSoundDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSoundDelegate.m; sourceTree = "<group>"; };
 		C25C613918A1843000669391 /* PMPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPlayScene.h; sourceTree = "<group>"; };
 		C25C613A18A1843000669391 /* PMPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPlayScene.m; sourceTree = "<group>"; };
 		C25C613D18A18C5B00669391 /* gameTextures.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = gameTextures.atlas; sourceTree = "<group>"; };
-		C25C613F18A18C5B00669391 /* hh_bonus1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hh_bonus1.caf; sourceTree = "<group>"; };
-		C25C614018A18C5B00669391 /* hh_game_over.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hh_game_over.caf; sourceTree = "<group>"; };
-		C25C614118A18C5B00669391 /* hh_lost_life.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hh_lost_life.caf; sourceTree = "<group>"; };
-		C25C614218A18C5B00669391 /* hh_stage1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hh_stage1.caf; sourceTree = "<group>"; };
-		C25C614318A18C5B00669391 /* hh_stage2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hh_stage2.caf; sourceTree = "<group>"; };
-		C25C614418A18C5B00669391 /* hh_stage3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hh_stage3.caf; sourceTree = "<group>"; };
-		C25C614518A18C5B00669391 /* hh_title.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hh_title.caf; sourceTree = "<group>"; };
-		C25C614618A18C5B00669391 /* zombie1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zombie1.caf; sourceTree = "<group>"; };
-		C25C614718A18C5B00669391 /* zombie2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zombie2.caf; sourceTree = "<group>"; };
 		C2E0A4FC188F630B0050DF29 /* PlayMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E0A4FF188F630B0050DF29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2E0A501188F630B0050DF29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,8 +59,6 @@
 		C2E0A517188F630B0050DF29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		C2E0A519188F630B0050DF29 /* PMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMViewController.h; sourceTree = "<group>"; };
 		C2E0A51A188F630B0050DF29 /* PMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMViewController.m; sourceTree = "<group>"; };
-		C2E0A51C188F630B0050DF29 /* PMMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMMyScene.h; sourceTree = "<group>"; };
-		C2E0A51D188F630B0050DF29 /* PMMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMMyScene.m; sourceTree = "<group>"; };
 		C2E0A521188F630B0050DF29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C2E0A527188F630B0050DF29 /* PlayMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E0A528188F630B0050DF29 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -128,15 +104,6 @@
 		C25C613E18A18C5B00669391 /* sound */ = {
 			isa = PBXGroup;
 			children = (
-				C25C613F18A18C5B00669391 /* hh_bonus1.caf */,
-				C25C614018A18C5B00669391 /* hh_game_over.caf */,
-				C25C614118A18C5B00669391 /* hh_lost_life.caf */,
-				C25C614218A18C5B00669391 /* hh_stage1.caf */,
-				C25C614318A18C5B00669391 /* hh_stage2.caf */,
-				C25C614418A18C5B00669391 /* hh_stage3.caf */,
-				C25C614518A18C5B00669391 /* hh_title.caf */,
-				C25C614618A18C5B00669391 /* zombie1.caf */,
-				C25C614718A18C5B00669391 /* zombie2.caf */,
 			);
 			path = sound;
 			sourceTree = "<group>";
@@ -182,14 +149,10 @@
 				C2E0A516188F630B0050DF29 /* Main_iPad.storyboard */,
 				C2E0A519188F630B0050DF29 /* PMViewController.h */,
 				C2E0A51A188F630B0050DF29 /* PMViewController.m */,
-				C2E0A51C188F630B0050DF29 /* PMMyScene.h */,
-				C2E0A51D188F630B0050DF29 /* PMMyScene.m */,
 				C2E0A521188F630B0050DF29 /* Images.xcassets */,
 				C2E0A508188F630B0050DF29 /* Supporting Files */,
 				C25C613318A14EE000669391 /* PMStartScene.h */,
 				C25C613418A14EE100669391 /* PMStartScene.m */,
-				C25C613618A14F5E00669391 /* PMSoundDelegate.h */,
-				C25C613718A14F5E00669391 /* PMSoundDelegate.m */,
 				C25C613918A1843000669391 /* PMPlayScene.h */,
 				C25C613A18A1843000669391 /* PMPlayScene.m */,
 			);
@@ -305,20 +268,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C25C614B18A18C5B00669391 /* hh_lost_life.caf in Resources */,
-				C25C615118A18C5B00669391 /* zombie2.caf in Resources */,
-				C25C614F18A18C5B00669391 /* hh_title.caf in Resources */,
 				C25C614818A18C5B00669391 /* gameTextures.atlas in Resources */,
-				C25C614E18A18C5B00669391 /* hh_stage3.caf in Resources */,
-				C25C615018A18C5B00669391 /* zombie1.caf in Resources */,
 				C2E0A522188F630B0050DF29 /* Images.xcassets in Resources */,
-				C25C614918A18C5B00669391 /* hh_bonus1.caf in Resources */,
 				C2E0A518188F630B0050DF29 /* Main_iPad.storyboard in Resources */,
 				C2E0A515188F630B0050DF29 /* Main_iPhone.storyboard in Resources */,
 				C2E0A50C188F630B0050DF29 /* InfoPlist.strings in Resources */,
-				C25C614A18A18C5B00669391 /* hh_game_over.caf in Resources */,
-				C25C614D18A18C5B00669391 /* hh_stage2.caf in Resources */,
-				C25C614C18A18C5B00669391 /* hh_stage1.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +295,7 @@
 				C2E0A50E188F630B0050DF29 /* main.m in Sources */,
 				C25C613518A14EE100669391 /* PMStartScene.m in Sources */,
 				C2E0A51B188F630B0050DF29 /* PMViewController.m in Sources */,
-				C25C613818A14F5E00669391 /* PMSoundDelegate.m in Sources */,
 				C2E0A512188F630B0050DF29 /* PMAppDelegate.m in Sources */,
-				C2E0A51E188F630B0050DF29 /* PMMyScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="PMViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PMViewController" id="BV1-FR-VrT" customClass="PMViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1UN-4c-gOI"/>
                         <viewControllerLayoutGuide type="bottom" id="Z7k-WU-nVS"/>
@@ -25,7 +25,7 @@
         <!--Start Game View Controller-->
         <scene sceneID="005-dl-aHq">
             <objects>
-                <viewController id="K44-J0-aes" customClass="StartGameViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartGameViewController" id="K44-J0-aes" customClass="StartGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N8d-XQ-C9s"/>
                         <viewControllerLayoutGuide type="bottom" id="nhr-SA-7cP"/>
@@ -49,6 +49,9 @@
                                 <state key="normal" image="playButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="K44-J0-aes" eventType="touchUpInside" id="kwQ-qK-pdy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -61,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPr-YG-WsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2172" y="-116"/>
+            <point key="canvasLocation" x="2206" y="-110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DqU-Cc-FXe">
@@ -82,7 +85,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWP-cE-PD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198" y="-116"/>
+            <point key="canvasLocation" x="1028" y="-110"/>
         </scene>
     </scenes>
     <resources>

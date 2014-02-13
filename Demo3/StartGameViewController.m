@@ -7,12 +7,23 @@
 //
 
 #import "StartGameViewController.h"
+#import "PMViewController.h"
 
 @interface StartGameViewController ()
 
 @end
 
 @implementation StartGameViewController
+
+- (IBAction)playButtonPressed:(UIButton*)sender
+{
+    NSLog(@"Play button pressed");
+    
+    PMViewController *pmViewController = [self.storyboard instantiateViewControllerWithIdentifier:
+                                                      @"PMViewController"];
+    
+    [self.navigationController pushViewController:pmViewController animated:YES];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

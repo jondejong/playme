@@ -7,7 +7,7 @@
 //
 
 #import "PMViewController.h"
-//#import "PMStartScene.h"
+#import "PMPlayScene.h"
 
 @implementation PMViewController
 
@@ -18,9 +18,9 @@
 //    [[PMSoundDelegate sharedInstance] playBackgroundMusic:BGM_TITLE];
 
     SKView *spriteView = (SKView *) self.view;
-    spriteView.showsDrawCount = YES;
-    spriteView.showsNodeCount = YES;
-    spriteView.showsFPS = YES;
+    spriteView.showsDrawCount = NO;
+    spriteView.showsNodeCount = NO;
+    spriteView.showsFPS = NO;
 }
 
 - (void) viewWillLayoutSubviews
@@ -30,9 +30,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-//    PMStartScene* startScene = [[PMStartScene alloc] initWithSize:CGSizeMake(1024,768)];
-//    SKView *spriteView = (SKView *) self.view;
-//    [spriteView presentScene: startScene];
+    PMPlayScene* startScene = [[PMPlayScene alloc] initWithSize:CGSizeMake(1024,768)];
+    SKView *spriteView = (SKView *) self.view;
+    [spriteView presentScene: startScene];
 }
 
 - (BOOL)shouldAutorotate

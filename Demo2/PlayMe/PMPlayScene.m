@@ -65,6 +65,7 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     CGPoint offset = CGPointMake(touchLocation.x - hoopy.position.x, touchLocation.y - hoopy.position.y);
     CGFloat length = sqrtf(offset.x * offset.x + offset.y * offset.y);
     
+//    [hoopy.physicsBody applyForce: CGVectorMake(offset.x/length * HOOPY_THRUST, offset.y/length * HOOPY_THRUST)];
     [hoopy.physicsBody applyImpulse: CGVectorMake(offset.x/length * HOOPY_THRUST, offset.y/length * HOOPY_THRUST)];
 }
 
@@ -81,8 +82,9 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     
     // Add edge physics body for the border
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-    self.physicsWorld.contactDelegate = self;
     self.physicsBody.categoryBitMask = PMEdgeCat;
+
+    self.physicsWorld.contactDelegate = self;
     
     [self addBackground];
     
@@ -92,8 +94,8 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     // Add Hoopy
     [self addHoopy];
     
-    // Add Lable
-    _hitLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier Bold" ];
+    // Add Label
+    _hitLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier Bold"];
     _hitLabel.position = CGPointMake(100, 700);
     _hitLabel.fontSize = 40.0;
     _hitLabel.fontColor = [SKColor blackColor];
@@ -133,17 +135,19 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     }];
     return hoopy;
 }
-     
+
 -(void)addHoopy
 {
     SKSpriteNode *hoopy = [SKSpriteNode spriteNodeWithTexture:_hoopyTexture];
     hoopy.name = @"hoopy";
-
+    
     hoopy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:hoopy.size.width/2];
     hoopy.physicsBody.dynamic = YES;
     hoopy.physicsBody.restitution = 1.0;
     hoopy.physicsBody.categoryBitMask = PMHoopyCat;
     hoopy.physicsBody.collisionBitMask = PMZombieCat | PMEdgeCat;
+    
+//    hoopy.physicsBody.affectedByGravity = NO;
     
     hoopy.position = CGPointMake(self.size.width/2, self.size.height-50);
     
@@ -156,9 +160,9 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     zombie.name = @"zombie";
     
     zombie.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:zombie.size];
-//    zombie.physicsBody.dynamic = YES;
+    //    zombie.physicsBody.dynamic = YES;
     zombie.physicsBody.dynamic = NO;
-//    zombie.physicsBody.allowsRotation = YES;
+    //    zombie.physicsBody.allowsRotation = YES;
     zombie.physicsBody.allowsRotation = NO;
     zombie.physicsBody.categoryBitMask = PMZombieCat;
     zombie.physicsBody.collisionBitMask = PMHoopyCat | PMEdgeCat;

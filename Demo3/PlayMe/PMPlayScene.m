@@ -151,6 +151,7 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     hoopy.physicsBody.restitution = 1.0;
     hoopy.physicsBody.categoryBitMask = PMHoopyCat;
     hoopy.physicsBody.collisionBitMask = PMZombieCat | PMEdgeCat;
+    hoopy.physicsBody.affectedByGravity = NO;
     
     hoopy.position = CGPointMake(self.size.width/2, self.size.height-50);
     

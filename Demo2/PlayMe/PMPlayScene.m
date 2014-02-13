@@ -55,6 +55,19 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     NSLog(@"end contact");
 }
 
+- (void)touchesBegan:(NSSet *) touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInNode:self];
+    
+    SKNode *hoopy = [self findHoopy];
+    
+    CGPoint offset = CGPointMake(touchLocation.x - hoopy.position.x, touchLocation.y - hoopy.position.y);
+    CGFloat length = sqrtf(offset.x * offset.x + offset.y * offset.y);
+    
+    [hoopy.physicsBody applyImpulse: CGVectorMake(offset.x/length * HOOPY_THRUST, offset.y/length * HOOPY_THRUST)];
+}
+
 - (void)createSceneContents
 {
     // Get the textures
@@ -102,15 +115,25 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
 
 -(void)readdHoopy
 {
-    [self enumerateChildNodesWithName:@"hoopy" usingBlock:^(SKNode *node, BOOL *stop) {
-        //If hoopy is off the screen, add another
-        if(node.position.y < 0 || node.position.y > 768 || node.position.x < 0 || node.position.x > 1024) {
-            [node removeFromParent];
-            [self addHoopy];
-        }
-    }];
+    SKNode* node = [self findHoopy];
+    
+    //If hoopy is off the screen, add another
+    if(node.position.y < 0 || node.position.y > 768 || node.position.x < 0 || node.position.x > 1024) {
+        [node removeFromParent];
+        [self addHoopy];
+    }
+    
 }
 
+-(SKNode *) findHoopy
+{
+    __block SKNode *hoopy = nil;
+    [self enumerateChildNodesWithName:@"hoopy" usingBlock:^(SKNode *node, BOOL *stop) {
+        hoopy = node;
+    }];
+    return hoopy;
+}
+     
 -(void)addHoopy
 {
     SKSpriteNode *hoopy = [SKSpriteNode spriteNodeWithTexture:_hoopyTexture];

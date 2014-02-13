@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C223260F18AD27D000A5E2B9 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C223260D18AD27D000A5E2B9 /* playButton.png */; };
 		C223261018AD27D000A5E2B9 /* playButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223260E18AD27D000A5E2B9 /* playButton@2x.png */; };
-		C223261318AD293500A5E2B9 /* StartGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C223261218AD293500A5E2B9 /* StartGameViewController.m */; };
+		C223261A18AD4DF100A5E2B9 /* StartGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C223261918AD4DF100A5E2B9 /* StartGameViewController.m */; };
 		C25C613B18A1843000669391 /* PMPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C25C613A18A1843000669391 /* PMPlayScene.m */; };
 		C25C614818A18C5B00669391 /* gameTextures.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C25C613D18A18C5B00669391 /* gameTextures.atlas */; };
 		C26B803618AD118900F93069 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C26B803418AD118900F93069 /* background.jpg */; };
@@ -45,9 +45,9 @@
 /* Begin PBXFileReference section */
 		C223260D18AD27D000A5E2B9 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
 		C223260E18AD27D000A5E2B9 /* playButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playButton@2x.png"; sourceTree = "<group>"; };
-		C223261118AD293500A5E2B9 /* StartGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameViewController.h; sourceTree = "<group>"; };
-		C223261218AD293500A5E2B9 /* StartGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameViewController.m; sourceTree = "<group>"; };
-		C223261418AD3F9300A5E2B9 /* PMPlayMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPlayMe.h; sourceTree = "<group>"; };
+		C223261718AD4DF100A5E2B9 /* PMPlayMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPlayMe.h; sourceTree = "<group>"; };
+		C223261818AD4DF100A5E2B9 /* StartGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameViewController.h; sourceTree = "<group>"; };
+		C223261918AD4DF100A5E2B9 /* StartGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameViewController.m; sourceTree = "<group>"; };
 		C25C613918A1843000669391 /* PMPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPlayScene.h; sourceTree = "<group>"; };
 		C25C613A18A1843000669391 /* PMPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPlayScene.m; sourceTree = "<group>"; };
 		C25C613D18A18C5B00669391 /* gameTextures.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = gameTextures.atlas; sourceTree = "<group>"; };
@@ -124,9 +124,6 @@
 		C2E0A4F3188F630B0050DF29 = {
 			isa = PBXGroup;
 			children = (
-				C223261418AD3F9300A5E2B9 /* PMPlayMe.h */,
-				C223261118AD293500A5E2B9 /* StartGameViewController.h */,
-				C223261218AD293500A5E2B9 /* StartGameViewController.m */,
 				C2E0A507188F630B0050DF29 /* PlayMe */,
 				C2E0A52E188F630B0050DF29 /* PlayMeTests */,
 				C2E0A4FE188F630B0050DF29 /* Frameworks */,
@@ -159,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				C25C613C18A18C5B00669391 /* Resources */,
+				C223261718AD4DF100A5E2B9 /* PMPlayMe.h */,
+				C223261818AD4DF100A5E2B9 /* StartGameViewController.h */,
+				C223261918AD4DF100A5E2B9 /* StartGameViewController.m */,
 				C2E0A510188F630B0050DF29 /* PMAppDelegate.h */,
 				C2E0A511188F630B0050DF29 /* PMAppDelegate.m */,
 				C2E0A513188F630B0050DF29 /* Main_iPhone.storyboard */,
@@ -313,7 +313,7 @@
 				C2E0A50E188F630B0050DF29 /* main.m in Sources */,
 				C2E0A51B188F630B0050DF29 /* PMViewController.m in Sources */,
 				C2E0A512188F630B0050DF29 /* PMAppDelegate.m in Sources */,
-				C223261318AD293500A5E2B9 /* StartGameViewController.m in Sources */,
+				C223261A18AD4DF100A5E2B9 /* StartGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

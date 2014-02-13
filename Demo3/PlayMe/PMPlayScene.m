@@ -7,7 +7,10 @@
 //
 
 #import "PMPlayScene.h"
+#import "PMPlayMe.h"
+
 #import <UIKit/UIKit.h>
+
 
 typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     PMHoopyCat = 1 << 0, // 0001 = 1
@@ -48,6 +51,10 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
 -(void) didRegisterHit
 {
     _hitLabel.text = [NSString stringWithFormat:@"Hits: %d", ++_hits];
+    if(_hits == MAX_HITS_ALLOWED) {
+        self.paused = YES;
+        self.gameOverBlock();
+    }
 }
 
 -(void) didEndContact:(SKPhysicsContact *)contact

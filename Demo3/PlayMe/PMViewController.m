@@ -8,14 +8,40 @@
 
 #import "PMViewController.h"
 #import "PMPlayScene.h"
+#import "PMPlayMe.h"
+
+@interface PMViewController() <UIAlertViewDelegate>
+
+@end
 
 @implementation PMViewController
+
+- (void)gameOver
+{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle: @"Game over"
+                          message:[NSString stringWithFormat:@"You hit the zombie %d times!", MAX_HITS_ALLOWED]
+                          delegate:self
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alert clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self goBack:alert];
+}
+
+- (void)goBack:(UIAlertView*)alert
+{
+    [alert dismissWithClickedButtonIndex:0 animated:YES];
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-//    [[PMSoundDelegate sharedInstance] playBackgroundMusic:BGM_TITLE];
 
     SKView *spriteView = (SKView *) self.view;
     spriteView.showsDrawCount = NO;
@@ -31,6 +57,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     PMPlayScene* startScene = [[PMPlayScene alloc] initWithSize:CGSizeMake(1024,768)];
+    
+    __weak PMViewController *weakSelf = self;
+    startScene.gameOverBlock = ^(){
+        [weakSelf gameOver];
+    };
+    
     SKView *spriteView = (SKView *) self.view;
     [spriteView presentScene: startScene];
 }

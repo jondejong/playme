@@ -47,6 +47,7 @@
 		C223260E18AD27D000A5E2B9 /* playButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playButton@2x.png"; sourceTree = "<group>"; };
 		C223261118AD293500A5E2B9 /* StartGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameViewController.h; sourceTree = "<group>"; };
 		C223261218AD293500A5E2B9 /* StartGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameViewController.m; sourceTree = "<group>"; };
+		C223261418AD3F9300A5E2B9 /* PMPlayMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPlayMe.h; sourceTree = "<group>"; };
 		C25C613918A1843000669391 /* PMPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPlayScene.h; sourceTree = "<group>"; };
 		C25C613A18A1843000669391 /* PMPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPlayScene.m; sourceTree = "<group>"; };
 		C25C613D18A18C5B00669391 /* gameTextures.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = gameTextures.atlas; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 		C2E0A4F3188F630B0050DF29 = {
 			isa = PBXGroup;
 			children = (
+				C223261418AD3F9300A5E2B9 /* PMPlayMe.h */,
 				C223261118AD293500A5E2B9 /* StartGameViewController.h */,
 				C223261218AD293500A5E2B9 /* StartGameViewController.m */,
 				C2E0A507188F630B0050DF29 /* PlayMe */,

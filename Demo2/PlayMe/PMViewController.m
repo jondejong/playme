@@ -15,8 +15,6 @@
 {
     [super viewDidLoad];
 
-//    [[PMSoundDelegate sharedInstance] playBackgroundMusic:BGM_TITLE];
-
     SKView *spriteView = (SKView *) self.view;
     spriteView.showsDrawCount = YES;
     spriteView.showsNodeCount = YES;

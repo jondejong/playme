@@ -7,21 +7,21 @@ PlayMe is a demo "game" (admittedly, a not at all fun game), built in iOS 7 on S
 
 # Demo 1
 This demo intoduces:
-+Sprite basics
-+Animations
-+Scene Transitions
-+Basic physics bodies
+* Sprite basics
+* Animations
+* Scene Transitions
+* Basic physics bodies
 
 # Demo 2
 Building on Demo 1, this demo adds:
 
-*Controlling a phsyics body with user input
-*Labels
-*Collision Handling
+* Controlling a phsyics body with user input
+* Labels
+* Collision Handling
 
 #Demo 3
 Building on Demo 2, this demo adds:
 
-*More Storyboard integration
-*UI Kit integration
+* More Storyboard integration
+* UI Kit integration
 

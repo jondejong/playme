@@ -60,7 +60,6 @@
         [helloNode runAction: moveSequence completion:^{
             SKScene *spaceshipScene  = [[PMPlayScene alloc] initWithSize:self.size];
             SKTransition *doors = [SKTransition doorsOpenVerticalWithDuration:0.5];
-//            [[PMSoundDelegate sharedInstance] playBackgroundMusic:BGM_STAGE1];
             [self.view presentScene:spaceshipScene transition:doors];
         }];
         

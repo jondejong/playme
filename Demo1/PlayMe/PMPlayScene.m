@@ -65,31 +65,29 @@
 
 -(void)readdHoopy
 {
-    [self enumerateChildNodesWithName:@"hoopyNode" usingBlock:^(SKNode *node, BOOL *stop) {
-        //If hoopy is off the screen, add another
-        if(node.position.y < 0 || node.position.y > 768 || node.position.x < 0 || node.position.x > 1024) {
-            [node removeFromParent];
-            [self addHoopy];
-            //testing sound disable and re-enable
-//            PMSoundDelegate *sharedInstance = [PMSoundDelegate sharedInstance];
-//            if([sharedInstance isEnabled])
-//            {
-//                [sharedInstance playSoundEffect:SFX_ZOMBIE2 :self];
-//                [sharedInstance setEnabled:NO];
-//            }
-//            else
-//            {
-//                [sharedInstance setEnabled:YES];
-//                [sharedInstance playSoundEffect:SFX_ZOMBIE1 :self];
-//            }
-        }
+    SKNode* node = [self findHoopy];
+    
+    //If hoopy is off the screen, add another
+    if(node.position.y < 0 || node.position.y > 768 || node.position.x < 0 || node.position.x > 1024) {
+        [node removeFromParent];
+        [self addHoopy];
+    }
+    
+}
+
+-(SKNode *) findHoopy
+{
+    __block SKNode *hoopy = nil;
+    [self enumerateChildNodesWithName:@"hoopy" usingBlock:^(SKNode *node, BOOL *stop) {
+        hoopy = node;
     }];
+    return hoopy;
 }
 
 -(void)addHoopy
 {
     SKSpriteNode *hoopy = [SKSpriteNode spriteNodeWithTexture:_hoopyTexture];
-    hoopy.name = @"hoopyNode";
+    hoopy.name = @"hoopy";
     hoopy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:hoopy.size.width/2];
     hoopy.physicsBody.dynamic = YES;
     
@@ -104,11 +102,8 @@
 {
     SKSpriteNode *zombie = [SKSpriteNode spriteNodeWithTexture:_zombieTexture];
     zombie.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:zombie.size];
-//    zombie.physicsBody.dynamic = YES;
     zombie.physicsBody.dynamic = NO;
-//    zombie.physicsBody.allowsRotation = YES;
     zombie.physicsBody.allowsRotation = NO;
-    
     
     float xMove = 1024-zombie.size.width;
     

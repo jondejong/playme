@@ -24,6 +24,8 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     SKTextureAtlas* _atlas;
     SKTexture* _hoopyTexture;
     SKTexture* _zombieTexture;
+    SKLabelNode * _hitLabel;
+    int _hits;
 }
 
 - (void)didMoveToView:(SKView *)view
@@ -37,10 +39,15 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
 
 -(void) didBeginContact:(SKPhysicsContact *)contact
 {
-    NSLog(@"contact");
-    if(contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask) {
-        NSLog(@"HIT!!");
-    }
+    NSString * aName = contact.bodyA.node.name;
+    NSString * bName = contact.bodyB.node.name;
+    NSLog(@"Contact between %@ and %@", aName, bName);
+    [self didRegisterHit];
+}
+
+-(void) didRegisterHit
+{
+    _hitLabel.text = [NSString stringWithFormat:@"Hits: %d", ++_hits];
 }
 
 -(void) didEndContact:(SKPhysicsContact *)contact
@@ -54,6 +61,7 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     _atlas = [SKTextureAtlas atlasNamed:@"gameTextures"];
     _hoopyTexture = [_atlas textureNamed:@"red_ball.png"];
     _zombieTexture = [_atlas textureNamed:@"zombie.png"];
+    _hits = 0;
     
     self.backgroundColor = [SKColor blackColor];
     self.scaleMode = SKSceneScaleModeAspectFit;
@@ -71,6 +79,14 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
     // Add Hoopy
     [self addHoopy];
     
+    // Add Lable
+    _hitLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier Bold" ];
+    _hitLabel.position = CGPointMake(100, 700);
+    _hitLabel.fontSize = 40.0;
+    _hitLabel.fontColor = [SKColor blackColor];
+    _hitLabel.text = @"Hits: 0";
+    [self addChild:_hitLabel];
+    
     SKAction *readdHoopy = [SKAction sequence: @[
                                                  [SKAction performSelector:@selector(readdHoopy) onTarget:self],
                                                  [SKAction waitForDuration:2]
@@ -86,7 +102,7 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
 
 -(void)readdHoopy
 {
-    [self enumerateChildNodesWithName:@"hoopyNode" usingBlock:^(SKNode *node, BOOL *stop) {
+    [self enumerateChildNodesWithName:@"hoopy" usingBlock:^(SKNode *node, BOOL *stop) {
         //If hoopy is off the screen, add another
         if(node.position.y < 0 || node.position.y > 768 || node.position.x < 0 || node.position.x > 1024) {
             [node removeFromParent];
@@ -98,7 +114,7 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
 -(void)addHoopy
 {
     SKSpriteNode *hoopy = [SKSpriteNode spriteNodeWithTexture:_hoopyTexture];
-    hoopy.name = @"hoopyNode";
+    hoopy.name = @"hoopy";
 
     hoopy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:hoopy.size.width/2];
     hoopy.physicsBody.dynamic = YES;
@@ -114,6 +130,8 @@ typedef NS_OPTIONS(uint32_t, PMPhysicsCategory) {
 - (SKSpriteNode *)addZombie
 {
     SKSpriteNode *zombie = [SKSpriteNode spriteNodeWithTexture:_zombieTexture];
+    zombie.name = @"zombie";
+    
     zombie.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:zombie.size];
 //    zombie.physicsBody.dynamic = YES;
     zombie.physicsBody.dynamic = NO;

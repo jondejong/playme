@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C25C613518A14EE100669391 /* PMStartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C25C613418A14EE100669391 /* PMStartScene.m */; };
+		C223260F18AD27D000A5E2B9 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C223260D18AD27D000A5E2B9 /* playButton.png */; };
+		C223261018AD27D000A5E2B9 /* playButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C223260E18AD27D000A5E2B9 /* playButton@2x.png */; };
+		C223261318AD293500A5E2B9 /* StartGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C223261218AD293500A5E2B9 /* StartGameViewController.m */; };
 		C25C613B18A1843000669391 /* PMPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C25C613A18A1843000669391 /* PMPlayScene.m */; };
 		C25C614818A18C5B00669391 /* gameTextures.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C25C613D18A18C5B00669391 /* gameTextures.atlas */; };
 		C26B803618AD118900F93069 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C26B803418AD118900F93069 /* background.jpg */; };
@@ -41,8 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C25C613318A14EE000669391 /* PMStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMStartScene.h; sourceTree = "<group>"; };
-		C25C613418A14EE100669391 /* PMStartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMStartScene.m; sourceTree = "<group>"; };
+		C223260D18AD27D000A5E2B9 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		C223260E18AD27D000A5E2B9 /* playButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playButton@2x.png"; sourceTree = "<group>"; };
+		C223261118AD293500A5E2B9 /* StartGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameViewController.h; sourceTree = "<group>"; };
+		C223261218AD293500A5E2B9 /* StartGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameViewController.m; sourceTree = "<group>"; };
 		C25C613918A1843000669391 /* PMPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPlayScene.h; sourceTree = "<group>"; };
 		C25C613A18A1843000669391 /* PMPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPlayScene.m; sourceTree = "<group>"; };
 		C25C613D18A18C5B00669391 /* gameTextures.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = gameTextures.atlas; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				C26B803418AD118900F93069 /* background.jpg */,
 				C26B803518AD118900F93069 /* background@2x.jpg */,
+				C223260D18AD27D000A5E2B9 /* playButton.png */,
+				C223260E18AD27D000A5E2B9 /* playButton@2x.png */,
 				C25C613D18A18C5B00669391 /* gameTextures.atlas */,
 				C25C613E18A18C5B00669391 /* sound */,
 			);
@@ -117,6 +123,8 @@
 		C2E0A4F3188F630B0050DF29 = {
 			isa = PBXGroup;
 			children = (
+				C223261118AD293500A5E2B9 /* StartGameViewController.h */,
+				C223261218AD293500A5E2B9 /* StartGameViewController.m */,
 				C2E0A507188F630B0050DF29 /* PlayMe */,
 				C2E0A52E188F630B0050DF29 /* PlayMeTests */,
 				C2E0A4FE188F630B0050DF29 /* Frameworks */,
@@ -157,8 +165,6 @@
 				C2E0A51A188F630B0050DF29 /* PMViewController.m */,
 				C2E0A521188F630B0050DF29 /* Images.xcassets */,
 				C2E0A508188F630B0050DF29 /* Supporting Files */,
-				C25C613318A14EE000669391 /* PMStartScene.h */,
-				C25C613418A14EE100669391 /* PMStartScene.m */,
 				C25C613918A1843000669391 /* PMPlayScene.h */,
 				C25C613A18A1843000669391 /* PMPlayScene.m */,
 			);
@@ -277,6 +283,8 @@
 				C25C614818A18C5B00669391 /* gameTextures.atlas in Resources */,
 				C2E0A522188F630B0050DF29 /* Images.xcassets in Resources */,
 				C2E0A518188F630B0050DF29 /* Main_iPad.storyboard in Resources */,
+				C223261018AD27D000A5E2B9 /* playButton@2x.png in Resources */,
+				C223260F18AD27D000A5E2B9 /* playButton.png in Resources */,
 				C26B803718AD118900F93069 /* background@2x.jpg in Resources */,
 				C26B803618AD118900F93069 /* background.jpg in Resources */,
 				C2E0A515188F630B0050DF29 /* Main_iPhone.storyboard in Resources */,
@@ -301,9 +309,9 @@
 			files = (
 				C25C613B18A1843000669391 /* PMPlayScene.m in Sources */,
 				C2E0A50E188F630B0050DF29 /* main.m in Sources */,
-				C25C613518A14EE100669391 /* PMStartScene.m in Sources */,
 				C2E0A51B188F630B0050DF29 /* PMViewController.m in Sources */,
 				C2E0A512188F630B0050DF29 /* PMAppDelegate.m in Sources */,
+				C223261318AD293500A5E2B9 /* StartGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

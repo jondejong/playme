@@ -7,7 +7,7 @@
 //
 
 #import "PMViewController.h"
-#import "PMStartScene.h"
+//#import "PMStartScene.h"
 
 @implementation PMViewController
 
@@ -30,9 +30,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    PMStartScene* startScene = [[PMStartScene alloc] initWithSize:CGSizeMake(1024,768)];
-    SKView *spriteView = (SKView *) self.view;
-    [spriteView presentScene: startScene];
+//    PMStartScene* startScene = [[PMStartScene alloc] initWithSize:CGSizeMake(1024,768)];
+//    SKView *spriteView = (SKView *) self.view;
+//    [spriteView presentScene: startScene];
 }
 
 - (BOOL)shouldAutorotate

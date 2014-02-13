@@ -23,5 +23,5 @@ Building on Demo 1, this demo adds:
 Building on Demo 2, this demo adds:
 
 * More Storyboard integration
-* UI Kit integration
+* UIKit integration
 

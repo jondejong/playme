@@ -13,6 +13,6 @@
 #define PM_PLAY_ME_H
 
 #define HOOPY_THRUST 100
-#define MAX_HITS_ALLOWED 10
+#define MAX_HITS_ALLOWED 3
 
 #endif

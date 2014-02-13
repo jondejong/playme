@@ -1,26 +1,26 @@
 //
-//  StartGameViewController.m
+//  PMStartGameViewController.m
 //  PlayMe
 //
 //  Created by Jon DeJong on 2/13/14.
 //  Copyright (c) 2014 Jon DeJong. All rights reserved.
 //
 
-#import "StartGameViewController.h"
+#import "PMStartGameViewController.h"
 #import "PMViewController.h"
 
-@interface StartGameViewController ()
+@interface PMStartGameViewController ()
 
 @end
 
-@implementation StartGameViewController
+@implementation PMStartGameViewController
 
 - (IBAction)playButtonPressed:(UIButton*)sender
 {
     NSLog(@"Play button pressed");
     
     PMViewController *pmViewController = [self.storyboard instantiateViewControllerWithIdentifier:
-                                                      @"PMViewController"];
+                                          @"PMViewController"];
     
     [self.navigationController pushViewController:pmViewController animated:YES];
 }
@@ -45,5 +45,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

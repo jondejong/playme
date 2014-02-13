@@ -13,10 +13,13 @@
                         <viewControllerLayoutGuide type="bottom" id="Z7k-WU-nVS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,7 +28,7 @@
         <!--Start Game View Controller-->
         <scene sceneID="005-dl-aHq">
             <objects>
-                <viewController storyboardIdentifier="StartGameViewController" id="K44-J0-aes" customClass="StartGameViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartGameViewController" id="K44-J0-aes" customClass="PMStartGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N8d-XQ-C9s"/>
                         <viewControllerLayoutGuide type="bottom" id="nhr-SA-7cP"/>

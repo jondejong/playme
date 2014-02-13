@@ -56,15 +56,15 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    PMPlayScene* startScene = [[PMPlayScene alloc] initWithSize:CGSizeMake(1024,768)];
+    PMPlayScene* playScene = [[PMPlayScene alloc] initWithSize:CGSizeMake(1024,768)];
     
     __weak PMViewController *weakSelf = self;
-    startScene.gameOverBlock = ^(){
+    playScene.gameOverBlock = ^(){
         [weakSelf gameOver];
     };
     
     SKView *spriteView = (SKView *) self.view;
-    [spriteView presentScene: startScene];
+    [spriteView presentScene: playScene];
 }
 
 - (BOOL)shouldAutorotate

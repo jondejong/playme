@@ -1,5 +1,5 @@
 //
-//  StartGameViewController.h
+//  PMStartGameViewController.h
 //  PlayMe
 //
 //  Created by Jon DeJong on 2/13/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartGameViewController : UIViewController
+@interface PMStartGameViewController : UIViewController
 
 @end

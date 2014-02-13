@@ -96,16 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				C25C613D18A18C5B00669391 /* gameTextures.atlas */,
-				C25C613E18A18C5B00669391 /* sound */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		C25C613E18A18C5B00669391 /* sound */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = sound;
 			sourceTree = "<group>";
 		};
 		C2E0A4F3188F630B0050DF29 = {

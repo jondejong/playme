@@ -58,9 +58,9 @@
         SKAction *moveSequence = [SKAction sequence:@[moveUp, zoom, pause, zoomOut, fadeAway, remove]];
         
         [helloNode runAction: moveSequence completion:^{
-            SKScene *spaceshipScene  = [[PMPlayScene alloc] initWithSize:self.size];
+            SKScene *playScene  = [[PMPlayScene alloc] initWithSize:self.size];
             SKTransition *doors = [SKTransition doorsOpenVerticalWithDuration:0.5];
-            [self.view presentScene:spaceshipScene transition:doors];
+            [self.view presentScene:playScene transition:doors];
         }];
         
         [helloNode runAction: moveSequence];

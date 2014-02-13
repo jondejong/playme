@@ -15,7 +15,7 @@ This demo intoduces:
 # Demo 2
 Building on Demo 1, this demo adds:
 
-* Controlling a phsyics body with user input
+* Controlling a physics body with user input
 * Labels
 * Collision Handling
 
